@@ -1,6 +1,8 @@
 function buscar() {
     const modelo = document.getElementById("modelo").value;
-    const url = `http://localhost:8080/api/buscar?modelo=${encodeURIComponent(modelo)}`;
+    // const url = `http://localhost:8080/api/buscar?modelo=${encodeURIComponent(modelo)}`;
+    const url = `https://centraldetecnologia-production-6937.up.railway.app/api/buscar?modelo=${encodeURIComponent(modelo)}`;
+
   
     fetch(url)
       .then(res => res.json())
