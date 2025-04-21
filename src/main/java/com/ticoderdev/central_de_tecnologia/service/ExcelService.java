@@ -18,7 +18,7 @@ public class ExcelService {
     public List<ModeloTelefone> buscaModeloTelefone(String modeloBusca) {
         List<ModeloTelefone> resultados = new ArrayList<>();
 
-        try (InputStream inputStream = getClass().getClassLoader().getResourceAsStream("/telefone.xlsx");
+        try (InputStream inputStream = getClass().getClassLoader().getResourceAsStream("telefone.xlsx");
                 
                 Workbook workbook = new XSSFWorkbook(inputStream)) {
 
