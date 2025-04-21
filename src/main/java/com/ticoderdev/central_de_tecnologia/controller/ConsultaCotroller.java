@@ -9,11 +9,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.ticoderdev.central_de_tecnologia.model.ModeloTelefone;
 import com.ticoderdev.central_de_tecnologia.service.ExcelService;
+
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 
 
 @RestController
 @RequestMapping("/api")
+@CrossOrigin(origins = "https://centraldetecnologia-production-6937.up.railway.app")
 public class ConsultaCotroller {
     
     @Autowired
