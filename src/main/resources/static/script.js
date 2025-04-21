@@ -8,6 +8,7 @@ function buscar() {
       .then(res => res.json())
       .then(data => {
         const resultadoDiv = document.getElementById("resultado");
+        
         resultadoDiv.innerHTML = "";
   
         if (data.length === 0) {
