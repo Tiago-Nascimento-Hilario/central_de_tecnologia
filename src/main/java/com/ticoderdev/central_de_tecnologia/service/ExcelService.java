@@ -1,6 +1,7 @@
 package com.ticoderdev.central_de_tecnologia.service;
 
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
@@ -17,7 +18,8 @@ public class ExcelService {
     public List<ModeloTelefone> buscaModeloTelefone(String modeloBusca) {
         List<ModeloTelefone> resultados = new ArrayList<>();
 
-        try (InputStream inputStream = getClass().getResourceAsStream("/telefone.xlsx");
+        try (InputStream inputStream = getClass().getClassLoader().getResourceAsStream("/telefone.xlsx");
+                
                 Workbook workbook = new XSSFWorkbook(inputStream)) {
 
             Sheet sheet = workbook.getSheetAt(0);
