@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @RestController
 @RequestMapping("/api")
-@CrossOrigin(origins = "https://centraldetecnologia-production-6937.up.railway.app")
+@CrossOrigin(origins = "*")
 public class ConsultaCotroller {
     
     @Autowired
